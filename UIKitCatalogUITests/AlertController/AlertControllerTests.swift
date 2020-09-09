@@ -11,11 +11,11 @@ import XCTest
 class AlertControllerTests: XCUIBaseTest {
     
     let alertControllerScreen = AlertControllerScreen()
-
-        func testAlertControllerLabels() {
-            alertControllerScreen.tapAlertController()
-            alertControllerScreen.validatePresenceOfAlertStyleOptions()
-            alertControllerScreen.validatePresenceOfActionSheetOptions()
-        }
-
+    
+    func testAlertControllerLabels() {
+        alertControllerScreen.tapAlertController()
+        alertControllerScreen.validatePresenceOfAlertStyleOptions()
+        alertControllerScreen.validatePresenceOfActionSheetOptions()
+    }
+    
 }

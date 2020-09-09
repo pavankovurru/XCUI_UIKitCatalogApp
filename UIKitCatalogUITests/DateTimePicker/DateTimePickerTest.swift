@@ -16,7 +16,6 @@ class DateTimePickerTests: XCUIBaseTest {
         
         dateTimePickerScreen.tapDatePicker()
         
-        
         let calendar = Calendar.current
         let day = calendar.component(.day, from: Date())
         let month = DateTimePickerScreen.month[calendar.component(.month, from: Date())]!
@@ -25,16 +24,10 @@ class DateTimePickerTests: XCUIBaseTest {
         let minute = "30"
         let dayAndMonth = "\(month) \(day)"
         
-        
         dateTimePickerScreen.setDate(date: dayAndMonth)
         dateTimePickerScreen.setHour(hour: hour)
         dateTimePickerScreen.setMinute(minute: minute)
         dateTimePickerScreen.setAmPm(amPm: "AM")
-        
-//        dateTimePickerScreen.setDate(date: "Apr 22")
-//        dateTimePickerScreen.setHour(hour: "9")
-//        dateTimePickerScreen.setMinute(minute: "30")
-//        dateTimePickerScreen.setAmPm(amPm: "AM")
         
         print(dateTimePickerScreen.getDate()) //Wed, Apr 22
         print(dateTimePickerScreen.getHour()) //9 o’clock

@@ -11,13 +11,12 @@ import XCTest
 class WebViewTests: XCUIBaseTest {
     
     let webViewScreen = WebViewScreen()
-
-        func testWebViewContent() {
-            webViewScreen.tapWebView()
-            webViewScreen.validateWebViewTitle()
-            webViewScreen.validateWebViewContent()
-                        
-        }
-
-
+    
+    func testWebViewContent() {
+        webViewScreen.tapWebView()
+        webViewScreen.validateWebViewTitle()
+        webViewScreen.validateWebViewContent()
+    }
+    
+    
 }

@@ -15,16 +15,16 @@ extension XCUIBaseTest {
     
     
     //waitForExistence
-//    func waitforExistence(element: XCUIElement, waitTime: Double, file: String = #file, line: UInt = #line){
-//        let isElementPresent = element.waitForExistence(timeout: waitTime)
-//        if isElementPresent {
-//            XCTAssertTrue(element.exists)
-//        }
-//        else{
-//            let message = "Failed to find \(element) after 5 seconds."
-//            self.recordFailure(withDescription: message, inFile: file, atLine: Int(line), expected: true)
-//        }
-//    }
+    //    func waitforExistence(element: XCUIElement, waitTime: Double, file: String = #file, line: UInt = #line){
+    //        let isElementPresent = element.waitForExistence(timeout: waitTime)
+    //        if isElementPresent {
+    //            XCTAssertTrue(element.exists)
+    //        }
+    //        else{
+    //            let message = "Failed to find \(element) after 5 seconds."
+    //            self.recordFailure(withDescription: message, inFile: file, atLine: Int(line), expected: true)
+    //        }
+    //    }
     
     
     //XCTestWaiter
