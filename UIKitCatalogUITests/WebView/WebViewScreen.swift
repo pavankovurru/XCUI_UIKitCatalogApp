@@ -10,7 +10,6 @@ import XCTest
 
 class WebViewScreen: XCUIBaseTest {
     
-    
     //MARK:- Alert controller Main Page
     func tapWebView(){
         XCTContext.runActivity(named: "Tap WebView") { _ in

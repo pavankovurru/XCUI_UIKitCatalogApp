@@ -1,0 +1,33 @@
+{
+  "configurations" : [
+    {
+      "id" : "A9A29DDF-992D-4534-85FB-37F138987C89",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "maximumTestRepetitions" : 2,
+    "testRepetitionMode" : "retryOnFailure",
+    "testTimeoutsEnabled" : true,
+    "userAttachmentLifetime" : "keepAlways"
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "selectedTests" : [
+        "AlertControllerTests\/testAlertControllerLabels()",
+        "DateTimePickerTests\/testDateTimePicker()",
+        "WebViewTests\/testWebViewContent()"
+      ],
+      "target" : {
+        "containerPath" : "container:UIKitCatalog.xcodeproj",
+        "identifier" : "CC7CFA15248416E900091842",
+        "name" : "UIKitCatalogUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

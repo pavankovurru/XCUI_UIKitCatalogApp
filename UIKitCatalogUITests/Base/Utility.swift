@@ -10,44 +10,6 @@ import XCTest
 
 extension XCUIBaseTest {
     
-    
-    // MARK:- Waits
-    
-    
-    //waitForExistence
-    //    func waitforExistence(element: XCUIElement, waitTime: Double, file: String = #file, line: UInt = #line){
-    //        let isElementPresent = element.waitForExistence(timeout: waitTime)
-    //        if isElementPresent {
-    //            XCTAssertTrue(element.exists)
-    //        }
-    //        else{
-    //            let message = "Failed to find \(element) after 5 seconds."
-    //            self.recordFailure(withDescription: message, inFile: file, atLine: Int(line), expected: true)
-    //        }
-    //    }
-    
-    
-    //XCTestWaiter
-    func waitForElementToAppear(_ element: XCUIElement, timeout: Double, file: String = #file, line: UInt = #line) -> Bool {
-        let predicate = NSPredicate(format: "exists == true")
-        let expectedExpectation = expectation(for: predicate, evaluatedWith: element,handler: nil)
-        let result = XCTWaiter().wait(for: [expectedExpectation], timeout: timeout)
-        return result == .completed
-    }
-    
-    func waitForElementToAppearThenReturnElement(_ element: XCUIElement, timeout: Double, file: String = #file, line: UInt = #line) -> XCUIElement? {
-        let predicate = NSPredicate(format: "exists == true")
-        let expectedExpectation = expectation(for: predicate, evaluatedWith: element,handler: nil)
-        let result = XCTWaiter().wait(for: [expectedExpectation], timeout: timeout)
-        if result == .completed {
-            return element
-        } else {
-            let message = "Failed to find \(element) after 5 seconds."
-            self.recordFailure(withDescription: message, inFile: file, atLine: Int(line), expected: true)
-            return nil
-        }
-    }
-    
     //MARK:- Scrolling
     func scrollToElementIfElementIsNotHittable(_ element: XCUIElement, maxScrolls: Int){
         for _ in 0..<maxScrolls {
@@ -73,6 +35,42 @@ extension XCUIBaseTest {
         }
     }
     
+    // MARK:- Is element Present
+    func isElementPresentInView(element: XCUIElement) -> Bool{
+        return app.windows.firstMatch.frame.contains(element.frame)
+    }
+    
+    // MARK:- Print app hierarchy
+    func printAppHierarchy(){
+        print(app.debugDescription)
+    }
+    
+    // MARK:- Is test running on ipad
+    func isIpad() -> Bool {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            return true
+        }
+        return false
+    }
+    
+    // MARK:- Change Device Orientation
+    func changeDeviceOrientation(to orientation: UIDeviceOrientation) {
+        
+        let device = XCUIDevice.shared
+        
+        switch orientation {
+        case .portrait:
+            device.orientation = .portrait
+        case .landscapeLeft:
+            device.orientation = .landscapeLeft
+        case .landscapeRight:
+            device.orientation = .landscapeRight
+        case .portraitUpsideDown:
+            device.orientation = .portraitUpsideDown
+        default:
+            print("Unsupported orientation")
+        }
+    }
     
     // MARK:- ScreenShot
     func takeScreenshotOfMainWindow(screenshotName: String) {
@@ -82,18 +80,5 @@ extension XCUIBaseTest {
         attachment.lifetime = .keepAlways
         add(attachment)
     }
-    
-    
-    // MARK:- Print app hierarchy
-    func printAppHierarchy(){
-        print(app.debugDescription)
-    }
-    
-    
-    // MARK:- Is element Present
-    func isElementPresentInView(element: XCUIElement) -> Bool{
-        return app.windows.firstMatch.frame.contains(element.frame)
-    }
-    
 }
 

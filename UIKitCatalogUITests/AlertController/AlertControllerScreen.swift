@@ -16,7 +16,6 @@ class AlertControllerScreen: XCUIBaseTest {
         }
     }
     
-    
     //MARK:- Alert controller Main Page
     func tapAlertController(){
         XCTContext.runActivity(named: "Tap Alert Controller") { _ in

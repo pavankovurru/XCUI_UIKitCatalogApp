@@ -159,6 +159,7 @@
 		CC7CFA2D2484175100091842 /* DateTimePickerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimePickerTest.swift; sourceTree = "<group>"; };
 		CC7CFA2E2484175100091842 /* DateTimePickerScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimePickerScreen.swift; sourceTree = "<group>"; };
 		CC7CFA3A2484191C00091842 /* README_XCUI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_XCUI.md; sourceTree = "<group>"; };
+		CCD092152C753E8C0067A3B8 /* TestPlanFull.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlanFull.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +328,7 @@
 				CC7CFA18248416E900091842 /* UIKitCatalogUITests.swift */,
 				CC7CFA1A248416E900091842 /* Info.plist */,
 				CC7CFA3A2484191C00091842 /* README_XCUI.md */,
+				CCD092152C753E8C0067A3B8 /* TestPlanFull.xctestplan */,
 			);
 			path = UIKitCatalogUITests;
 			sourceTree = "<group>";
