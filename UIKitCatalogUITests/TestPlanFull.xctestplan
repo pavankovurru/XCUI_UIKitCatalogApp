@@ -9,9 +9,15 @@
     }
   ],
   "defaultOptions" : {
+    "commandLineArgumentEntries" : [
+      {
+        "argument" : ""
+      }
+    ],
     "maximumTestRepetitions" : 2,
     "testRepetitionMode" : "retryOnFailure",
     "testTimeoutsEnabled" : true,
+    "uiTestingScreenshotsLifetime" : "keepAlways",
     "userAttachmentLifetime" : "keepAlways"
   },
   "testTargets" : [

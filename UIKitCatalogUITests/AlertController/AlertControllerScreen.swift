@@ -8,8 +8,8 @@
 
 import XCTest
 
-class AlertControllerScreen: XCUIBaseTest {
-    
+class AlertControllerScreen {
+        
     func navigateBackToHomeScreen(){
         XCTContext.runActivity(named: "Navigate back to home screen") { _ in
             AlertControllerMainLocators.navigateBackUICatalogButton.element.firstMatch.tap()

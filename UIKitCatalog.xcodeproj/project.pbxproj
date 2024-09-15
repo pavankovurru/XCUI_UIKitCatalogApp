@@ -61,6 +61,9 @@
 		53CE5AF81F2A8BD000D8A656 /* SwitchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53CE5AF61F2A8BD000D8A656 /* SwitchViewController.storyboard */; };
 		53CE5AFB1F2A8BEB00D8A656 /* TextFieldViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53CE5AF91F2A8BEB00D8A656 /* TextFieldViewController.storyboard */; };
 		B50F41081B1D284700E5147D /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50F41071B1D284700E5147D /* StackViewController.swift */; };
+		CC68659E2C974889002D612A /* GenericLocators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC68659D2C974888002D612A /* GenericLocators.swift */; };
+		CC6865A12C97491B002D612A /* LaunchPerformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6865A02C97491B002D612A /* LaunchPerformance.swift */; };
+		CC6865A32C9749BE002D612A /* ScreenLoadTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6865A22C9749BE002D612A /* ScreenLoadTime.swift */; };
 		CC7CFA19248416E900091842 /* UIKitCatalogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CFA18248416E900091842 /* UIKitCatalogUITests.swift */; };
 		CC7CFA2F2484175100091842 /* XCUIBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CFA212484175100091842 /* XCUIBaseTest.swift */; };
 		CC7CFA302484175100091842 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CFA222484175100091842 /* Utility.swift */; };
@@ -144,6 +147,9 @@
 		53CE5AFA1F2A8BEB00D8A656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TextFieldViewController.storyboard; sourceTree = "<group>"; };
 		53DDE73C22776382000006CF /* UIKitCatalog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UIKitCatalog.entitlements; sourceTree = "<group>"; };
 		B50F41071B1D284700E5147D /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		CC68659D2C974888002D612A /* GenericLocators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericLocators.swift; sourceTree = "<group>"; };
+		CC6865A02C97491B002D612A /* LaunchPerformance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPerformance.swift; sourceTree = "<group>"; };
+		CC6865A22C9749BE002D612A /* ScreenLoadTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenLoadTime.swift; sourceTree = "<group>"; };
 		CC7CFA16248416E900091842 /* UIKitCatalogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitCatalogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7CFA18248416E900091842 /* UIKitCatalogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitCatalogUITests.swift; sourceTree = "<group>"; };
 		CC7CFA1A248416E900091842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -318,9 +324,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CC68659F2C9748D5002D612A /* Performance */ = {
+			isa = PBXGroup;
+			children = (
+				CC6865A02C97491B002D612A /* LaunchPerformance.swift */,
+				CC6865A22C9749BE002D612A /* ScreenLoadTime.swift */,
+			);
+			path = Performance;
+			sourceTree = "<group>";
+		};
 		CC7CFA17248416E900091842 /* UIKitCatalogUITests */ = {
 			isa = PBXGroup;
 			children = (
+				CC68659F2C9748D5002D612A /* Performance */,
 				CC7CFA202484175100091842 /* Base */,
 				CC7CFA272484175100091842 /* AlertController */,
 				CC7CFA2B2484175100091842 /* DateTimePicker */,
@@ -338,6 +354,7 @@
 			children = (
 				CC7CFA212484175100091842 /* XCUIBaseTest.swift */,
 				CC7CFA222484175100091842 /* Utility.swift */,
+				CC68659D2C974888002D612A /* GenericLocators.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -535,6 +552,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC7CFA19248416E900091842 /* UIKitCatalogUITests.swift in Sources */,
+				CC6865A12C97491B002D612A /* LaunchPerformance.swift in Sources */,
 				CC7CFA372484175100091842 /* DateTimePickerLocators.swift in Sources */,
 				CC7CFA342484175100091842 /* AlertControllerScreen.swift in Sources */,
 				CC7CFA322484175100091842 /* WebViewLocators.swift in Sources */,
@@ -542,6 +560,8 @@
 				CC7CFA312484175100091842 /* WebViewTest.swift in Sources */,
 				CC7CFA352484175100091842 /* AlertControllerTests.swift in Sources */,
 				CC7CFA362484175100091842 /* AlertControllerLocators.swift in Sources */,
+				CC6865A32C9749BE002D612A /* ScreenLoadTime.swift in Sources */,
+				CC68659E2C974889002D612A /* GenericLocators.swift in Sources */,
 				CC7CFA332484175100091842 /* WebViewScreen.swift in Sources */,
 				CC7CFA382484175100091842 /* DateTimePickerTest.swift in Sources */,
 				CC7CFA2F2484175100091842 /* XCUIBaseTest.swift in Sources */,
