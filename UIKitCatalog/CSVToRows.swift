@@ -1,26 +1,22 @@
-//
-//  CSVToRows.swift
-//  UIKitCatalog
-//
-//  Created by pavan Kovurru on 10/18/24.
-//  Copyright © 2024 Apple. All rights reserved.
-//
-
 import Foundation
 
-// Function to convert CSV string to rows
+// Function to convert CSV string to rows, ensuring no blank rows
 func convertCSVToRows(csv: String) -> String {
     // Split the CSV string by commas
     let values = csv.components(separatedBy: ",")
     
-    // Join the values with newline characters to format each value in a new row
-    let formattedRows = values.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }.joined(separator: "\n")
+    // Map the values, trim spaces, and filter out any empty entries
+    let filteredValues = values.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+                               .filter { !$0.isEmpty }
+    
+    // Join the filtered values with newline characters to format each value in a new row
+    let formattedRows = filteredValues.joined(separator: "\n")
     
     return formattedRows
 }
 
 // Example CSV string
-let csvInput = "apple, banana, cherry, date, elderberry"
+let csvInput = "apple, banana, , cherry, , date, elderberry"
 
 // Convert and print the result
 let result = convertCSVToRows(csv: csvInput)
