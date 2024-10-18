@@ -8,46 +8,20 @@
 
 import Foundation
 
-func convertCSVToRows(csvString: String) -> [[String]] {
-    var rows: [[String]] = []
-    var currentRow: [String] = []
-    var currentField = ""
-    var inQuotes = false
-
-    for character in csvString {
-        switch character {
-        case ",":
-            if inQuotes {
-                currentField.append(character)
-            } else {
-                currentRow.append(currentField)
-                currentField = ""
-            }
-        case "\n":
-            currentRow.append(currentField)
-            rows.append(currentRow)
-            currentRow = []
-            currentField = ""
-        case "\"":
-            inQuotes.toggle()
-        default:
-            currentField.append(character)
-        }
-    }
-
-    // Add the last row if it's not empty
-    if !currentField.isEmpty || !currentRow.isEmpty {
-        currentRow.append(currentField)
-        rows.append(currentRow)
-    }
-
-    return rows
+// Function to convert CSV string to rows
+func convertCSVToRows(csv: String) -> String {
+    // Split the CSV string by commas
+    let values = csv.components(separatedBy: ",")
+    
+    // Join the values with newline characters to format each value in a new row
+    let formattedRows = values.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }.joined(separator: "\n")
+    
+    return formattedRows
 }
 
-// Example usage with commas within quotes:
-let csvData = "Name,Age,City\n\"John Doe, Jr.\",30,\"New York, NY\"\nJane,25,Los Angeles\nPeter,40,Chicago"
-let rows = convertCSVToRows(csvString: csvData)
+// Example CSV string
+let csvInput = "apple, banana, cherry, date, elderberry"
 
-//for row in rows {
-//    print(row)
-//}
+// Convert and print the result
+let result = convertCSVToRows(csv: csvInput)
+print(result)
