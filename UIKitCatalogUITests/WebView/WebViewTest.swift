@@ -16,6 +16,7 @@ class WebViewTests: XCUIBaseTest {
         webViewScreen.tapWebView()
         webViewScreen.validateWebViewTitle()
         webViewScreen.validateWebViewContent()
+        app.performAccessibilityAudit()
     }
     
     
